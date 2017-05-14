@@ -84,7 +84,7 @@ public class NowPlaying_Detail extends AppCompatActivity {
                     textViewReview.setText("Overview : " + o.getString("overview"));
                     url = o.getJSONObject("link").getString("url");
                     Glide
-                            .with(TopRated_Detail.this)
+                            .with(NowPlaying_Detail.this)
                             .load("http://image.tmdb.org/t/p/w500" + o.getString("poster_path"))
                             .into(imageViewDetail);
                 } catch (JSONException e) {
