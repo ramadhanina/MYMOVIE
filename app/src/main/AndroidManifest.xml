@@ -22,9 +22,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".TopRated_Detail" />
-        <activity android:name=".TopRated_Detail" />
-        <activity android:name=".TopRated_Detail" />
-        <activity android:name=".TopRated_Detail"></activity>
+        <activity android:name=".Popular_Detail" />
+        <activity android:name=".NowPlaying_Detail" />
+        <activity android:name=".ComingSoon_Detail"></activity>
     </application>
 
 </manifest>
