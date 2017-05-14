@@ -32,8 +32,8 @@ public class ComingSoon extends Fragment {
         // Required empty public constructor
     }
 
-    public static Recommended newInstance() {
-        Recommended fragment = new Recommended();
+    public static Popular newInstance() {
+        Popular fragment = new Popular();
         return fragment;
     }
 

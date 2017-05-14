@@ -38,6 +38,7 @@ public class Source {
     public String country;
     //public List<String> urlsToLogos;
     public List<String> sortBysAvailable;
+    public String backdrop_path;
     //public int color;
 
 }

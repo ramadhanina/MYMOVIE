@@ -23,12 +23,12 @@ import id.sch.smktelkom_mlg.privateassignment.xirpl427.mymovie.service.GsonGetRe
 import id.sch.smktelkom_mlg.privateassignment.xirpl427.mymovie.service.VolleySingleton;
 
 
-public class NowPlaying extends Fragment {
+public class TopRated extends Fragment {
 
     ArrayList<Source> mList = new ArrayList<>();
     SourceAdapter mAdapter;
 
-    public NowPlaying() {
+    public TopRated() {
         // Required empty public constructor
     }
 
@@ -41,7 +41,7 @@ public class NowPlaying extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_now_playing, container, false);
+        return inflater.inflate(R.layout.fragment_top_rated, container, false);
     }
 
     @Override
@@ -58,7 +58,7 @@ public class NowPlaying extends Fragment {
 
     private void downloadDataSource() {
         //String url = "https://newsapi.org/v1/sources?language=en";
-        String url = "https://api.themoviedb.org/3/movie/now_playing?api_key=4ba921fae327d8542a64e7148853c0b7";
+        String url = "https://api.themoviedb.org/3/movie/top_rated?api_key=4ba921fae327d8542a64e7148853c0b7";
 
         GsonGetRequest<SourcesResponse> myRequest = new GsonGetRequest<SourcesResponse>
                 (url, SourcesResponse.class, null, new Response.Listener<SourcesResponse>() {

@@ -1,10 +1,7 @@
 package id.sch.smktelkom_mlg.privateassignment.xirpl427.mymovie;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -64,9 +61,6 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -86,15 +80,17 @@ public class MainActivity extends AppCompatActivity
         Fragment fragment = null;
 
         if (id == R.id.nav_now_playing) {
-            fragment = new ComingSoon();
+            fragment = new NowPlaying();
             setTitle("Now Playing");
-        } else if (id == R.id.nav_recommended) {
-            fragment = new Recommended();
+        } else if (id == R.id.nav_top_rated) {
+            fragment = new Popular();
             setTitle("Top Rated");
         } else if (id == R.id.nav_coming_soon) {
             fragment = new ComingSoon();
             setTitle("Coming Soon");
-        }
+        } else if (id == R.id.nav_popular) {
+            fragment = new Popular();
+            setTitle("Popular"); }
 
         getSupportFragmentManager().beginTransaction()
         .replace(R.id.container, fragment).commitNow();

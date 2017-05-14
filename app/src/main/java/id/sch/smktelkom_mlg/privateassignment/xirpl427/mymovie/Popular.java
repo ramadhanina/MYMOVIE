@@ -23,17 +23,17 @@ import id.sch.smktelkom_mlg.privateassignment.xirpl427.mymovie.service.GsonGetRe
 import id.sch.smktelkom_mlg.privateassignment.xirpl427.mymovie.service.VolleySingleton;
 
 
-public class Recommended extends Fragment {
+public class Popular extends Fragment {
 
     ArrayList<Source> mList = new ArrayList<>();
     SourceAdapter mAdapter;
 
-    public Recommended() {
+    public Popular() {
         // Required empty public constructor
     }
 
-    public static Recommended newInstance() {
-        Recommended fragment = new Recommended();
+    public static Popular newInstance() {
+        Popular fragment = new Popular();
         return fragment;
     }
 
@@ -41,7 +41,7 @@ public class Recommended extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_recommended, container, false);
+        return inflater.inflate(R.layout.fragment_popular, container, false);
     }
 
     @Override
@@ -58,7 +58,7 @@ public class Recommended extends Fragment {
 
     private void downloadDataSource() {
         //String url = "https://newsapi.org/v1/sources?language=en";
-        String url = "https://api.themoviedb.org/3/movie/top_rated?api_key=4ba921fae327d8542a64e7148853c0b7";
+        String url = "https://api.themoviedb.org/3/movie/popular?api_key=4ba921fae327d8542a64e7148853c0b7";
 
         GsonGetRequest<SourcesResponse> myRequest = new GsonGetRequest<SourcesResponse>
                 (url, SourcesResponse.class, null, new Response.Listener<SourcesResponse>() {

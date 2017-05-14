@@ -8,7 +8,7 @@
             android:title="Now Playing" />
 
         <item
-            android:id="@+id/nav_recommended"
+            android:id="@+id/nav_top_rated"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Top Rated" />
 
@@ -16,6 +16,11 @@
             android:id="@+id/nav_coming_soon"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Coming Soon" />
+
+        <item
+            android:id="@+id/nav_popular"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Popular" />
     </group>
 
 </menu>

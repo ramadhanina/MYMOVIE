@@ -47,7 +47,7 @@ public class SourceAdapter extends RecyclerView.Adapter<SourceAdapter.ViewHolder
         holder.tvDesc.setText(source.overview);
         //holder.itemView.setBackgroundColor(source.color);
         Glide.with(context)
-                .load(IMAGE_URL_BASE_PATH + source.poster_path)
+                .load(IMAGE_URL_BASE_PATH + source.backdrop_path)
                 .into(holder.ivPoster);
     }
 
@@ -67,20 +67,12 @@ public class SourceAdapter extends RecyclerView.Adapter<SourceAdapter.ViewHolder
         TextView tvName;
         TextView tvDesc;
 
-
         public ViewHolder(View itemView) {
             super(itemView);
             tvName = (TextView) itemView.findViewById(R.id.textViewName);
             tvDesc = (TextView) itemView.findViewById(R.id.textViewDesc);
             ivPoster = (ImageView) itemView.findViewById(R.id.imageView);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Source source = list.get(getAdapterPosition());
-                    List<String> sort = source.sortBysAvailable;
-                    mISourceAdapter.showArticles(source.id, source.title, sort.get(sort.size() - 1));
-                }
-            });
+
         }
     }
 }
