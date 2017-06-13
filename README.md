@@ -1,7 +1,7 @@
 # MYMOVIE
 
 ### Link File APK release dari Aplikasi 
-https://drive.google.com/a/smktelkom-mlg.sch.id/file/d/0BwgoIJQ5vBcma2VUajVCWmhtUUk/view?usp=sharing
+https://drive.google.com/a/smktelkom-mlg.sch.id/file/d/0BwgoIJQ5vBcmUzY2VklFZ1ZHZVU/view?usp=sharing
 
 ### Identitas Siswa :
  Nama lengkap : Nina Aulia Ramadhani
